@@ -1,0 +1,550 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_module.activity.SignUpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBack"
+                style="@style/backButton"
+                android:paddingVertical="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_2sdp"
+                android:paddingStart="0dp"
+                android:src="@drawable/back_arrow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:fontFamily="@font/gelion_bold"
+                android:text="Sign Up"
+                android:textColor="@color/loginBtnColor"
+                android:textSize="@dimen/_24sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/gelion_medium"
+                android:text="@string/welcome"
+                android:textColor="@color/signUpBtnColor"
+                android:textSize="@dimen/_16sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:fontFamily="@font/gelion_light"
+                android:text="@string/please_sign_up_to_your_account"
+                android:textColor="@color/signUpBtnColor" />
+
+            <!-- Name Field -->
+            <LinearLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelion_light"
+                    android:text="@string/name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:textCursorDrawable="@null"
+                    android:background="@drawable/back_click_shape"
+                    android:fontFamily="@font/gelion_light"
+                    android:hint="@string/name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:paddingVertical="@dimen/_14sdp" />
+
+            </LinearLayout>
+
+            <!-- Phone Number Field -->
+            <LinearLayout
+                android:id="@+id/phoneNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelion_light"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/back_click_shape"
+                    android:fontFamily="@font/gelion_light"
+                    android:inputType="phone"
+                    android:hint="@string/enter_phone_number"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:maxLength="10"
+                    android:singleLine="true"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:paddingVertical="@dimen/_14sdp" />
+
+            </LinearLayout>
+
+            <!-- Email Id Field -->
+            <LinearLayout
+                android:id="@+id/emailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelion_light"
+                    android:text="@string/email_id"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/back_click_shape"
+                    android:fontFamily="@font/gelion_light"
+                    android:hint="@string/email_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:paddingVertical="@dimen/_14sdp" />
+
+            </LinearLayout>
+
+            <!-- Outlet Name Field -->
+            <LinearLayout
+                android:id="@+id/outletNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtOutletName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelion_light"
+                    android:text="@string/outlet_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtOutletName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/back_click_shape"
+                    android:fontFamily="@font/gelion_light"
+                    android:hint="@string/outlet_name"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:paddingVertical="@dimen/_14sdp" />
+
+            </LinearLayout>
+
+            <!-- Address Field -->
+            <LinearLayout
+                android:id="@+id/locationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelion_light"
+                    android:text="location"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/edtLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/back_click_shape"
+                    android:fontFamily="@font/gelion_light"
+                    android:hint="Location"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:paddingVertical="@dimen/_14sdp"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+   <!-- Address Field -->
+            <LinearLayout
+                android:id="@+id/addressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelion_light"
+                    android:text="Full Address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/back_click_shape"
+                    android:fontFamily="@font/gelion_light"
+                    android:hint="Full Address"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:paddingVertical="@dimen/_14sdp"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <!-- City Field -->
+            <LinearLayout
+                android:id="@+id/cityNameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtCityName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelion_light"
+                    android:text="@string/city"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/back_click_shape"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:paddingVertical="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/edtCityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gelion_light"
+                    android:hint="@string/city"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/ic_down_arrow"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+
+            <!-- Pin code Field -->
+            <LinearLayout
+                android:id="@+id/pinCodeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtPincodeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelion_light"
+                    android:text="@string/pin_code"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtPincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/back_click_shape"
+                    android:fontFamily="@font/gelion_light"
+                    android:hint="@string/pin_code"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:paddingVertical="@dimen/_14sdp" />
+
+            </LinearLayout>
+
+            <!-- Pan Number Field -->
+            <LinearLayout
+                android:id="@+id/panNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtPanNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelion_light"
+                    android:text="@string/pan_number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtPanNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@drawable/back_click_shape"
+                    android:fontFamily="@font/gelion_light"
+                    android:hint="@string/pan_number"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:paddingHorizontal="@dimen/_14sdp"
+                    android:paddingVertical="@dimen/_14sdp" />
+
+            </LinearLayout>
+
+            <!-- Image View Pan Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPanCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:visibility="gone"
+                app:cardCornerRadius="@dimen/_16sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgPanCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/app_logo" />
+
+                <ImageView
+                    android:id="@+id/ivClearPanCard"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="3dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_clear"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Upload Pan Card -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnUploadPancard"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/btn_storke_shape"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="@string/upload_pan_card"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textColor="@color/signUpBtnColor"/>
+
+         <!--   <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtSupportFiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/gelion_light"
+                android:text="@string/supported_file"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="center"
+                android:textColor="#8C8A8A" />
+-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/darkGray"
+                android:layout_marginTop="@dimen/_12sdp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtProvideDocument"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:fontFamily="@font/gelion_light"
+                android:text="@string/please_provide_a_document"
+                android:textColor="@color/black" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioGST"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gstin"
+                    android:includeFontPadding="false"
+                    android:checked="true"
+                    android:buttonTint="@color/loginBtnColor"/>
+
+                <RadioButton
+                    android:id="@+id/radioFssai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fssai"
+                    android:selectAllOnFocus="true"
+                    android:includeFontPadding="false"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:buttonTint="@color/loginBtnColor"/>
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtGstinorFssaiNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/back_click_shape"
+                android:fontFamily="@font/gelion_light"
+                android:hint="GSTIN*"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:paddingVertical="@dimen/_14sdp" />
+
+            <!-- Image View GSTIN Certificate -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/CardGST"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:visibility="gone"
+                app:cardElevation="@dimen/_6sdp"
+                app:cardCornerRadius="@dimen/_16sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgGstinOrFssai"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/app_logo" />
+
+                <ImageView
+                    android:id="@+id/ivClearGST"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="3dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_clear"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnUploadGstinCF"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/btn_storke_shape"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="@string/upload_gstin_certificate"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textColor="@color/signUpBtnColor"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtSupportFile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/gelion_light"
+                android:text="@string/supported_file"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="#8C8A8A" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSignUp"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/btn_shape"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                android:paddingVertical="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_24sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".main_module.activity.MyProfileActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_14sdp"
+            android:background="@drawable/back_click_shape"
+            android:imeOptions="actionDone"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/gelion_light"
+            android:hint="@string/name"
+            android:textColor="@color/black"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="@dimen/_14sdp"/>
+
+         <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_14sdp"
+            android:background="@drawable/back_click_shape"
+            android:imeOptions="actionDone"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/gelion_light"
+            android:hint="@string/phone_number"
+            android:inputType="number"
+             android:maxLength="10"
+             android:textColor="@color/black"
+             android:paddingHorizontal="@dimen/_14sdp"/>
+
+         <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_14sdp"
+            android:background="@drawable/back_click_shape"
+            android:imeOptions="actionNext"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/gelion_light"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+             android:textColor="@color/black"
+             android:paddingHorizontal="@dimen/_14sdp"/>
+
+            <TextView
+                android:id="@+id/edtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/back_click_shape"
+                android:fontFamily="@font/gelion_light"
+                android:hint="@string/address"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:text="@string/address"
+                android:textColor="@color/black"
+                android:paddingVertical="@dimen/_14sdp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_shape"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:paddingVertical="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llUnitsHeader">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_6sdp"
+                    android:layout_height="@dimen/_6sdp"
+                    android:src="@drawable/dot" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtUnits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="@dimen/_16sdp"
+                    android:text="3 Unit"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/gelion_light"
+                    android:includeFontPadding="false"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            tools:ignore="NestedWeights">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtUnitsPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="@dimen/_16sdp"
+                android:text="$100.00 / Units"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:textColor="@color/multiDarkGray"
+                android:fontFamily="@font/gelion_light"
+                android:includeFontPadding="false"
+                android:paddingVertical="@dimen/_10sdp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

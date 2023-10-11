@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">@color/green</color>
+    <color name="purple_500">@color/green</color>
+    <color name="purple_700">@color/green</color>
+    <color name="teal_200">@color/green</color>
+    <color name="teal_700">@color/green</color>
+
+    //Color For Bistro App
+    <color name="gray">#EFEFEF</color>
+    <color name="loginBtnColor">@color/green</color>
+    <color name="signUpBtnColor">@color/green</color>
+    <color name="multiDarkGray">#898888</color>
+    <color name="darkGray">#D8D8D8</color>
+    <color name="green">#089848</color>
+    <color name="yellow">#FFC107</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="outOfStockBG">#39000000</color>
+
+</resources>

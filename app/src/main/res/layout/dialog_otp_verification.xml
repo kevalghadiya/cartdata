@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:textSize="14sp"
+                android:fontFamily="@font/gelion_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center"
+                android:text="@string/otp_has_been_sent_to_your_phone"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvMobileNum"
+                android:textSize="14sp"
+                android:fontFamily="@font/gelion_regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center"
+                android:text="+91 ***** *****"
+                android:textColor="@color/black" />
+
+            <com.goodiebag.pinview.Pinview
+                android:id="@+id/pinViewt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:pinLength="6"
+                app:pinWidth="35dp"
+                app:pinHeight="35dp"
+                app:pinBackground="@drawable/back_click_shape"
+                android:focusableInTouchMode="true"
+                app:forceKeyboard="true"
+                app:password="false"
+                android:contextClickable="true"
+                app:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvTiming"
+                android:textSize="14sp"
+                android:fontFamily="@font/gelion_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Wait For 00:59 second"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tvConform"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:background="@drawable/btn_shape"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="Confirm"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/otpResent"
+                android:textSize="16sp"
+                android:fontFamily="@font/gelion_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/resend_otp"
+                android:visibility="gone"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

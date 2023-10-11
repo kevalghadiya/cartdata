@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_12sdp"
+    android:layout_marginHorizontal="@dimen/_14sdp"
+    android:background="@drawable/bg_edt_shape">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgProduct"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/_6sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.85"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            tools:ignore="NestedWeights">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/ProductTitleStyle"
+                android:id="@+id/txtproductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CART TEST"
+                android:gravity="center|start"
+                android:paddingBottom="@dimen/_2sdp"
+                android:maxLines="2"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:ellipsize="end"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/gelion_regular"
+                    android:gravity="center"
+                    android:text="₹00"
+                    android:layout_gravity="center"
+                    android:drawableEnd="@drawable/ic_right_arrow"
+                    android:textColor="@color/multiDarkGray"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMinus"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_minus"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMoneyCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/gelion_regular"
+                        android:textSize="@dimen/_14sdp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivPlus"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_plus"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPlusMinus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.35"
+            android:layout_margin="@dimen/_6sdp"
+            android:background="@drawable/increment_decrement_shape"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:gravity="center|bottom"
+                tools:ignore="NestedWeights">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgIncrement"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/plus_icon"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:padding="@dimen/_1sdp"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                tools:ignore="NestedWeights">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtQty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:gravity="center|bottom"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/gelion_medium"
+                    android:textSize="@dimen/_12sdp"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:paddingHorizontal="@dimen/_4sdp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                tools:ignore="NestedWeights">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgDecrement"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/subtract_icon"
+                    android:padding="@dimen/_1sdp"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main_module.fragment.CartFragment">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgBack"
+        style="@style/backButton"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/_2sdp"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtMyCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_46sdp"
+        android:fontFamily="@font/gelion_medium"
+        android:gravity="center"
+        android:text="My Cart"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_22sdp"
+        app:layout_constraintBottom_toBottomOf="@id/imgBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgBack"
+        app:layout_constraintTop_toTopOf="@id/imgBack" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCartDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_14sdp"
+        app:layout_constraintTop_toBottomOf="@id/imgBack"
+        tools:listitem="@layout/adapter_cart_details_row_file"
+        app:layout_constraintBottom_toTopOf="@id/llProceedToCheck"/>
+
+    <LinearLayout
+        android:id="@+id/llProceedToCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/_14sdp"
+        android:paddingVertical="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:orientation="vertical"
+            android:weightSum="2"
+            tools:ignore="NestedWeights">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Total Price"
+                android:gravity="center|bottom"
+                android:textColor="@color/black"
+                android:fontFamily="@font/gelion_medium"
+                android:textSize="@dimen/_16sdp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:ellipsize="end"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="₹ 00.00"
+                android:gravity="center|top"
+                android:textColor="@color/green"
+                android:paddingTop="@dimen/_2sdp"
+                android:fontFamily="@font/gelion_medium"
+                android:textSize="@dimen/_16sdp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCheckOut"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_shape"
+                android:textSize="@dimen/_16sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:paddingVertical="@dimen/_14sdp"
+                android:text="Proceed Check Out"
+                android:textColor="@color/black"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

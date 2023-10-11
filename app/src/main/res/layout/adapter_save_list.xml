@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:background="@drawable/bg_edt_shape">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CartFavourite"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    app:cardCornerRadius="@dimen/_6sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgSavedOrUnsaved"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/_4sdp"
+                        android:src="@drawable/saved_icon" />
+
+                </androidx.cardview.widget.CardView>
+
+
+              <!--  <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgProduct"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:adjustViewBounds="true"
+                    android:padding="@dimen/_6sdp" />
+-->
+                <RelativeLayout
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgProduct"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:padding="@dimen/_6sdp"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivOutOfStock"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/outOfStockBG"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_out_of_stock"
+                        android:tint="@color/white" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.85"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:weightSum="2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/ProductTitleStyle"
+                    android:id="@+id/txtproductName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="bottom|start"
+                    android:maxLines="2"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:text="Amul Milk"
+                    android:layout_marginTop="@dimen/_5sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:fontFamily="@font/gelion_regular"
+                    android:text="₹00"
+                    android:drawableEnd="@drawable/ic_right_arrow"
+                    android:textColor="@color/multiDarkGray"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMinus"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:background="@drawable/ic_minus" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMoneyCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="0"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/gelion_regular"
+                        android:textSize="@dimen/_14sdp"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivPlus"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:background="@drawable/ic_plus" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+
+            <!--  <LinearLayout
+                  android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_marginHorizontal="@dimen/_6sdp"
+                  android:layout_weight="0.35"
+                  android:gravity="center">
+
+                  <androidx.appcompat.widget.AppCompatImageView
+                      android:id="@+id/imgIncrement"
+                      android:layout_width="@dimen/_30sdp"
+                      android:layout_height="@dimen/_30sdp"
+                      android:layout_marginTop="@dimen/_2sdp"
+                      android:adjustViewBounds="true"
+                      android:padding="@dimen/_1sdp"
+                      android:src="@drawable/add_to_cart_icon" />
+
+              </LinearLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

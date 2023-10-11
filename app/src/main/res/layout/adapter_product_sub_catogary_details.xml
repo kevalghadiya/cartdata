@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/llMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:elevation="@dimen/_20sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_2sdp"
+        android:shadowColor="@color/gray"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgCategory"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_gravity="center" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivOutOfStock"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/outOfStockBG"
+                    android:padding="@dimen/_10sdp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_out_of_stock"
+                    android:tint="@color/white" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/ProductTitleStyle"
+                android:id="@+id/txtCategoryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="Power Milk"
+                android:lines="3"
+                android:maxLines="3"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/gelion_regular"
+                android:gravity="center"
+                android:text="₹00"
+                android:layout_gravity="center"
+                android:drawableEnd="@drawable/ic_right_arrow"
+                android:textColor="@color/black"
+                android:drawablePadding="@dimen/_5sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMinus"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/ic_minus"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMoneyCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="00"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/gelion_regular"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPlus"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/ic_plus"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "568710017027",
+    "project_id": "bistrokart-app",
+    "storage_bucket": "bistrokart-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568710017027:android:0ed94c8b7106e4ce045e36",
+        "android_client_info": {
+          "package_name": "com.bistrocart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568710017027-uis69ta1qejrfebog4rh3a0alq4f417a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bistrocart",
+            "certificate_hash": "f5bfeabf0b0a4b0d456fcf8092dbb456ba0852ce"
+          }
+        },
+        {
+          "client_id": "568710017027-0eh0bj2l58jvahfl9mnln1e5psuct3mp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJub7aG3WuFsl-EUoCfO7gGLDOaWhmT5k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568710017027-0eh0bj2l58jvahfl9mnln1e5psuct3mp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

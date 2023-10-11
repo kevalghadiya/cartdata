@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".utils.LocationActivity">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/toolbar">
+
+                <fragment
+                    android:id="@+id/myMap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"/>
+                <TextView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:cursorVisible="false"
+                    android:hint="location"
+                    android:inputType="text"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_edt_shape"
+                    android:fontFamily="@font/gelion_regular"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:drawableEnd="@drawable/quantum_ic_search_grey600_24"
+                    android:paddingHorizontal="@dimen/_16sdp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgMarker"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:tint="@color/green"
+                    android:src="@drawable/ic_map_marker" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+
+                    android:id="@+id/imgMyLocation"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_above="@+id/llEdit"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:padding="2dp"
+                    app:srcCompat="@drawable/ic_my_location"/>
+
+
+                <TextView
+                    android:id="@+id/tvFullAddressTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gelion_regular"
+                    android:textColor="@color/black"
+                    android:layout_above="@+id/llEdit"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:visibility="gone"
+                    android:text="Full Address"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tvAdd"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edt_shape"
+                        android:cursorVisible="true"
+                        android:fontFamily="@font/gelion_regular"
+                        android:gravity="center_vertical"
+                        android:hint="Enter address"
+                        android:inputType="textMultiLine"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:paddingVertical="15dp"
+                        android:textColor="@color/black" />
+
+                    <!--   <ImageView
+                        android:id="@+id/ivSearch"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/quantum_ic_search_grey600_24"
+                        app:tint="@color/black" />
+-->
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+       <!--         <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_60sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:text="ADD"
+                    android:textColor="@color/white" />-->
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tvAdd"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/btn_shape"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:text="Confirm Location"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+    </RelativeLayout>
+</layout>

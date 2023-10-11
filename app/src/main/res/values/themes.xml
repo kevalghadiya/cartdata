@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BistroCart" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/green</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="textForGuest" parent="Widget.AppCompat.TextView">
+
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/gelion_light</item>
+
+    </style>
+
+
+    <style name="button">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:fontFamily">@font/gelion_bold</item>
+
+    </style>
+
+    <style name="backButton">
+
+        <item name="android:layout_width">@dimen/_32sdp</item>
+        <item name="android:layout_height">@dimen/_32sdp</item>
+        <item name="android:layout_marginTop">@dimen/_24sdp</item>
+        <item name="android:background">@drawable/back_click_shape</item>
+
+    </style>
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="appDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="windowMinWidthMajor">100%</item>
+        <item name="windowMinWidthMinor">0%</item>
+        <item name="marginHorizontal">@dimen/_16sdp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <com.goodiebag.pinview.Pinview
+            android:id="@+id/pinViewt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pinLength="6"
+            app:pinWidth="45dp"
+            app:pinHeight="45dp"
+            app:pinBackground="@drawable/back_click_shape"
+            android:focusableInTouchMode="true"
+            app:forceKeyboard="true"
+            app:password="false"
+            android:contextClickable="true"
+            app:inputType="number" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
